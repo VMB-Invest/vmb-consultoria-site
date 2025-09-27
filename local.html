@@ -6,14 +6,13 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>VMB Invest - Contato</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script
-        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "foreground-light": "#000000", "foreground-dark": "#ffffff", "subtle-light": "#6b7280", "subtle-dark": "#9ca3af", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: "Inter", sans: "Inter" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "foreground-light": "#000000", "foreground-dark": "#ffffff", "subtle-light": "#6b7280", "subtle-dark": "#9ca3af", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
     <style>
         .form-input,
         .form-textarea {
@@ -44,11 +43,11 @@
             </div>
             <nav class="flex flex-1 justify-end gap-8">
                 <div class="flex items-center gap-8 text-sm font-medium text-white">
-                    <a class="hover:text-accent transition-colors" href="index.html">Home</a>
-                    <a class="hover:text-accent transition-colors" href="sobre.html">Sobre Nós</a>
-                    <a class="hover:text-accent transition-colors" href="equipe.html">Equipe</a>
+                    <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
+                    <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
+                    <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
                     <a class="hover:text-accent transition-colors font-bold text-accent" href="local.html">Contato</a>
-                    <a class="hover:text-accent transition-colors" href="trabalheconosco.html">Carreiras</a>
+                    <a class="hover:text-accent transition-colors font-thin" href="trabalheconosco.html">Carreiras</a>
                 </div>
                 <button
                     class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
