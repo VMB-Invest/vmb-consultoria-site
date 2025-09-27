@@ -6,44 +6,33 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
     <title>VMB Invest - Carreiras</title>
     <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#000000", "text-dark": "#ffffff", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
-    <style>
-        .fade-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    <style>       
+        .career-hero {
+            background-attachment: fixed;
         }
-        .fade-element.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .fade-delay-1 { transition-delay: 0.1s; }
-        .fade-delay-2 { transition-delay: 0.2s; }
-        .fade-delay-3 { transition-delay: 0.3s; }
-        .form-slide { transition: all 0.3s ease; }
-        .form-slide:focus { transform: scale(1.02); }
-        .career-hero { background-attachment: fixed; }
     </style>
 </head>
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="flex h-auto min-h-screen w-full flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10" style="background-color: #0D0D09;">
             <div class="flex items-center gap-3 text-white">
-                <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
             </div>
             <nav class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-8 text-sm font-medium text-white">
+                <div class="flex items-center gap-8 text-sm text-white">
                     <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
                     <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
                     <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
                     <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
-                    <a class="hover:text-accent transition-colors font-bold text-accent" href="trabalheconosco.html">Carreiras</a>
+                    <a class="hover:text-accent transition-colors font-thin text-accent" href="trabalheconosco.html">Carreiras</a>
                 </div>
                 <button
                     class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
@@ -60,7 +49,8 @@
                             class="absolute inset-0 flex flex-col items-start justify-end gap-6 rounded-xl p-6 md:p-10">
                             <div class="max-w-3xl space-y-4 fade-element">
                                 <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">Construa sua carreira na
-                                    <span class="text-accent">VMB Invest</span></h1>
+                                    <span class="text-accent">VMB Invest</span>
+                                </h1>
                                 <p class="text-base md:text-lg text-white/90 fade-element fade-delay-2">
                                     Junte-se a uma equipe apaixonada por transformar o futuro financeiro de nossos
                                     clientes. Na VMB Invest, valorizamos a inovação, a colaboração e o crescimento
@@ -88,7 +78,8 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="space-y-6 rounded-xl border border-white/10 p-6 shadow-sm fade-element fade-delay-1" style="background-color: #2a2a2a;">
+                        <div class="space-y-6 rounded-xl border border-white/10 p-6 shadow-sm fade-element fade-delay-1"
+                            style="background-color: #2a2a2a;">
                             <h2 class="text-2xl font-bold text-accent">Como se candidatar</h2>
                             <form class="space-y-4">
                                 <input
@@ -101,7 +92,8 @@
                                     class="w-full rounded border-gray-600 p-3 text-white placeholder-gray-400 focus:border-accent focus:ring-accent"
                                     placeholder="Telefone" type="tel" style="background-color: #404040;" />
                                 <select
-                                    class="w-full rounded border-gray-600 p-3 text-gray-400 focus:border-accent focus:ring-accent" style="background-color: #404040;">
+                                    class="w-full rounded border-gray-600 p-3 text-gray-400 focus:border-accent focus:ring-accent"
+                                    style="background-color: #404040;">
                                     <option disabled="" selected="" value="">Área de interesse</option>
                                     <option class="text-white" value="investimentos">Investimentos</option>
                                     <option class="text-white" value="planejamento">Planejamento Financeiro</option>
@@ -129,7 +121,8 @@
                     <a class="text-sm text-white/60 transition-colors hover:text-accent" href="sobre.html">Sobre nós</a>
                     <a class="text-sm text-white/60 transition-colors hover:text-accent" href="equipe.html">Equipe</a>
                     <a class="text-sm text-white/60 transition-colors hover:text-accent" href="local.html">Contato</a>
-                    <a class="text-sm text-white/60 transition-colors hover:text-accent" href="trabalheconosco.html">Carreiras</a>
+                    <a class="text-sm text-white/60 transition-colors hover:text-accent"
+                        href="trabalheconosco.html">Carreiras</a>
                 </div>
                 <div class="mt-8 flex justify-center gap-6">
                     <a class="text-white/60 transition-colors hover:text-accent" href="#">
@@ -161,28 +154,22 @@
             </div>
         </footer>
     </div>
-    
-    <script>
-        // Função de fade-in no scroll
-        function fadeInOnScroll() {
-            const elements = document.querySelectorAll('.fade-element');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('fade-in');
-                }
-            });
-        }
 
-        // Executar no carregamento e no scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        
-        // Executar imediatamente para elementos visíveis
-        fadeInOnScroll();
+    <script>
+        // Configuração do ScrollReveal
+        ScrollReveal({
+            distance: '60px',
+            duration: 2000,
+            delay: 300,
+            reset: false
+        });
+
+        // Animações gerais para elementos
+        ScrollReveal().reveal('.reveal-element', {
+            delay: 200,
+            distance: '30px',
+            origin: 'bottom'
+        });
     </script>
 </body>
 

@@ -7,39 +7,31 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
     <title>VMB Invest</title>
     <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#000000", "text-dark": "#ffffff", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
     <style>
-        .fade-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        .text-glow:hover {
+            text-shadow: 0 0 20px rgba(37, 197, 239, 0.5);
         }
-        .fade-element.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .fade-delay-1 { transition-delay: 0.1s; }
-        .fade-delay-2 { transition-delay: 0.2s; }
-        .fade-delay-3 { transition-delay: 0.3s; }
-        .text-glow:hover { text-shadow: 0 0 20px rgba(37, 197, 239, 0.5); }
     </style>
 </head>
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="flex min-h-screen w-full flex-col">
-                <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10"
+            style="background-color: #0D0D09;">
             <div class="flex items-center gap-3 text-white">
-                <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
             </div>
             <nav class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-8 text-sm font-medium text-white">
+                <div class="flex items-center gap-8 text-sm text-white">
                     <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
-                    <a class="hover:text-accent transition-colors font-bold text-accent" href="sobre.html">Sobre Nós</a>
+                    <a class="hover:text-accent transition-colors font-thin text-accent" href="sobre.html">Sobre Nós</a>
                     <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
                     <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
                     <a class="hover:text-accent transition-colors font-thin" href="trabalheconosco.html">Carreiras</a>
@@ -57,9 +49,10 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
                 <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-element">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">Nossa <span
-                            class="text-accent">História</span></h1>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-white/90 fade-element fade-delay-2">Construindo futuros financeiros sólidos com
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">
+                        Nossa <span class="text-accent">História</span></h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-white/90 fade-element fade-delay-2">Construindo
+                        futuros financeiros sólidos com
                         confiança e expertise.</p>
                 </div>
             </div>
@@ -105,28 +98,35 @@
             </div>
         </main>
     </div>
-    
+
     <script>
         // Função de fade-in no scroll
         function fadeInOnScroll() {
             const elements = document.querySelectorAll('.fade-element');
-            
+
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('fade-in');
                 }
             });
-        }
+            // Configuração do ScrollReveal
+            ScrollReveal({
+                distance: '60px',
+                duration: 2000,
+                delay: 300,
+                reset: false
+            });
 
-        // Executar no carregamento e no scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        
-        // Executar imediatamente para elementos visíveis
-        fadeInOnScroll();
+            // Animações gerais para elementos
+            ScrollReveal().reveal('.reveal-element', {
+                delay: 200,
+                distance: '30px',
+                origin: 'bottom'
+            });
+        }
     </script>
 </body>
 

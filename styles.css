@@ -3,6 +3,7 @@
 
 :root {
   --color-primary: #161616;
+  --color-black-dark: #0D0D09;
   --color-accent: #25c5ef;
   --color-white: #ffffff;
   --color-gray-100: #f3f4f6;
@@ -73,4 +74,9 @@ body {
 
 .card:hover {
   border-color: var(--color-accent);
+}
+
+/* Header */
+.header-bg {
+  background-color: #0D0D09;
 }

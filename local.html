@@ -8,45 +8,27 @@
     <title>VMB Invest - Contato</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script
         id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "foreground-light": "#000000", "foreground-dark": "#ffffff", "subtle-light": "#6b7280", "subtle-dark": "#9ca3af", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
-    <style>
-        .form-input,
-        .form-textarea {
-            --tw-ring-color: theme('colors.accent');
-        }
-        .fade-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .fade-element.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .fade-delay-1 { transition-delay: 0.1s; }
-        .fade-delay-2 { transition-delay: 0.2s; }
-        .fade-delay-3 { transition-delay: 0.3s; }
-        .contact-card { transition: all 0.4s ease; }
-        .contact-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(37, 197, 239, 0.1); }
-    </style>
 </head>
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10"
+            style="background-color: #0D0D09;">
             <div class="flex items-center gap-3 text-white">
-                <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
             </div>
             <nav class="flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-8 text-sm font-medium text-white">
+                <div class="flex items-center gap-8 text-sm text-white">
                     <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
                     <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
                     <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
-                    <a class="hover:text-accent transition-colors font-bold text-accent" href="local.html">Contato</a>
+                    <a class="hover:text-accent transition-colors font-thin text-accent" href="local.html">Contato</a>
                     <a class="hover:text-accent transition-colors font-thin" href="trabalheconosco.html">Carreiras</a>
                 </div>
                 <button
@@ -72,25 +54,29 @@
                                 <label class="block text-sm font-medium mb-2 text-white" for="name">Nome</label>
                                 <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-12 px-4 text-sm transition-colors"
-                                    id="name" placeholder="Seu nome completo" type="text" style="background-color: #2a2a2a;" />
+                                    id="name" placeholder="Seu nome completo" type="text"
+                                    style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="email">Email</label>
-                                                                <input
+                                <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-12 px-4 text-sm transition-colors"
-                                    id="email" placeholder="seu.email@exemplo.com" type="email" style="background-color: #2a2a2a;" />
+                                    id="email" placeholder="seu.email@exemplo.com" type="email"
+                                    style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="phone">Telefone</label>
-                                                                <input
+                                <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-12 px-4 text-sm transition-colors"
-                                    id="phone" placeholder="(11) 99999-9999" type="tel" style="background-color: #2a2a2a;" />
+                                    id="phone" placeholder="(11) 99999-9999" type="tel"
+                                    style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="message">Mensagem</label>
                                 <textarea
                                     class="form-textarea w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 p-4 text-sm transition-colors min-h-[140px] resize-y"
-                                    id="message" placeholder="Sua mensagem" style="background-color: #2a2a2a;"></textarea>
+                                    id="message" placeholder="Sua mensagem"
+                                    style="background-color: #2a2a2a;"></textarea>
                             </div>
                             <button
                                 class="w-full sm:w-auto flex items-center justify-center rounded-full h-12 px-8 bg-accent text-black text-sm font-bold transition-transform active:scale-95 hover:opacity-90"
@@ -164,28 +150,22 @@
             </div>
         </main>
     </div>
-    
-    <script>
-        // Função de fade-in no scroll
-        function fadeInOnScroll() {
-            const elements = document.querySelectorAll('.fade-element');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('fade-in');
-                }
-            });
-        }
 
-        // Executar no carregamento e no scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        
-        // Executar imediatamente para elementos visíveis
-        fadeInOnScroll();
+    <script>
+        // Configuração do ScrollReveal
+        ScrollReveal({
+            distance: '60px',
+            duration: 2000,
+            delay: 300,
+            reset: false
+        });
+
+        // Animações gerais para elementos
+        ScrollReveal().reveal('.reveal-element', {
+            delay: 200,
+            distance: '30px',
+            origin: 'bottom'
+        });
     </script>
 </body>
 

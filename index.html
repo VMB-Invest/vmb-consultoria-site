@@ -10,27 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", "background-light": "#f7f7f7", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#FFFFFF", "text-dark": "#FFFFFF", highlight: "#CCCCCC", accent: "#25c5ef", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
     <style>
-        .fade-element {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .fade-element.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .fade-delay-1 { transition-delay: 0.1s; }
-        .fade-delay-2 { transition-delay: 0.2s; }
-        .fade-delay-3 { transition-delay: 0.3s; }
-        .fade-delay-4 { transition-delay: 0.4s; }
-        .hero-content { animation: fadeInUp 1s ease-out; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .card-hover:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px rgba(37, 197, 239, 0.2); }
     </style>
@@ -41,13 +24,13 @@
 <body class="font-display bg-primary text-text-light" style="background-color: #161616;">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
         <div class="flex h-full grow flex-col">
-            <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+            <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10">
                 <div class="flex items-center gap-3 text-white">
-                    <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+                    <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
                 </div>
                 <nav class="flex flex-1 justify-end gap-8">
                     <div class="flex items-center gap-8 text-sm text-white">
-                        <a class="hover:text-accent transition-colors font-bold text-accent" href="index.html">Home</a>
+                        <a class="hover:text-accent transition-colors font-thin text-accent" href="index.html">Home</a>
                         <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
                         <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
                         <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
@@ -89,25 +72,25 @@
                     </section>
                     <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
                         <section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                            <div class="grid grid-cols-2 gap-4 fade-element">
+                            <div class="grid grid-cols-2 gap-4">
                                 <div
-                                    class="col-span-2 rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-1">
+                                    class="col-span-2 rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-1">
                                     <h3 class="text-4xl font-bold text-accent">750M+</h3>
                                     <p class="text-white/80">sob gestão</p>
                                 </div>
                                 <div
-                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-2">
+                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-2">
                                     <h3 class="text-4xl font-bold text-accent">3700+</h3>
                                     <p class="text-white/80">clientes</p>
                                 </div>
                                 <div
-                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-3">
+                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-3">
                                     <h3 class="text-4xl font-bold text-accent">121</h3>
                                     <p class="text-white/80">colaboradores</p>
                                 </div>
                             </div>
-                            <div class="text-left fade-element fade-delay-2">
-                                <h2 class="text-3xl font-bold text-white mb-4">Nossos Números Falam por Si</h2>
+                            <div class="text-left stats-text">
+                                <h2 class="text-3xl font-bold text-white mb-4 reveal-element">Nossos Números Falam por Si</h2>
                                 <p class="text-lg text-white/80">Nossa trajetória de sucesso é refletida nos números que
                                     conquistamos. A confiança depositada por nossos clientes e o crescimento contínuo de
                                     nossos ativos sob gestão demonstram a solidez e a eficácia de nossas estratégias.
@@ -116,10 +99,10 @@
                             </div>
                         </section>
                         <section class="mb-20">
-                            <h2 class="text-3xl font-bold text-white mb-10 text-center fade-element">Nossos Serviços</h2>
+                            <h2 class="text-3xl font-bold text-white mb-10 text-center services-title">Nossos Serviços</h2>
                             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover fade-element fade-delay-1" 
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
                                     style="background-color: #2a2a2a;">
                                     <span class="material-symbols-outlined text-4xl text-accent">analytics</span>
                                     <h3 class="text-lg font-bold text-white">Planejamento de Investimentos</h3>
@@ -127,7 +110,7 @@
                                         investimentos.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover fade-element fade-delay-2" 
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
                                     style="background-color: #2a2a2a;">
                                     <span
                                         class="material-symbols-outlined text-4xl text-accent">real_estate_agent</span>
@@ -136,14 +119,14 @@
                                         imóveis.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
                                     <span class="material-symbols-outlined text-4xl text-accent">business_center</span>
                                     <h3 class="text-lg font-bold text-white">Planejamento Empresarial</h3>
                                     <p class="text-sm text-white/70">Soluções financeiras para o crescimento do seu
                                         negócio.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
                                     <span class="material-symbols-outlined text-4xl text-accent">family_restroom</span>
                                     <h3 class="text-lg font-bold text-white">Planejamento Familiar</h3>
                                     <p class="text-sm text-white/70">Planejamento financeiro para garantir o futuro da
@@ -227,11 +210,11 @@
                             </div>
                         </section>
                         <section class="mb-20">
-                            <h2 class="text-3xl font-bold text-white mb-10 text-center">Depoimentos de Nossos Clientes
+                            <h2 class="text-3xl font-bold text-white mb-10 text-center reveal-element">Depoimentos de Nossos Clientes
                             </h2>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
@@ -241,7 +224,7 @@
                                     <p class="font-bold text-accent text-right">- Ana Silva</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
@@ -250,7 +233,7 @@
                                     <p class="font-bold text-accent text-right">- Carlos Pereira</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
@@ -321,7 +304,7 @@
                         <section class="py-16 bg-accent/10 rounded-xl mb-20 mt-10">
                             <div class="flex flex-col items-center justify-center gap-6 px-4 text-center">
                                 <h2 class="text-3xl font-extrabold text-white max-w-2xl">Dê o Próximo Passo Rumo ao Seu
-                                    Futuro Financeiro</h2>
+                                    Futuro Financeiro</h2>                               
                                 <button
                                     class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-accent text-white text-base font-bold shadow-lg hover:bg-opacity-80 transition-all">
                                     <span class="truncate">Agendar Consultoria</span>
@@ -366,26 +349,75 @@
     </div>
     
     <script>
-        // Função de fade-in no scroll
-        function fadeInOnScroll() {
-            const elements = document.querySelectorAll('.fade-element');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('fade-in');
-                }
-            });
-        }
+        // Configuração do ScrollReveal
+        ScrollReveal({
+            distance: '60px',
+            duration: 2000,
+            delay: 300,
+            reset: false
+        });
 
-        // Executar no carregamento e no scroll
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        
-        // Executar imediatamente para elementos visíveis
-        fadeInOnScroll();
+        // Animações do hero
+        ScrollReveal().reveal('.hero-content', {
+            delay: 500,
+            distance: '30px',
+            origin: 'bottom'
+        });
+
+        // Animações dos cards de estatísticas
+        ScrollReveal().reveal('.stats-card-1', {
+            delay: 100,
+            distance: '50px',
+            origin: 'left'
+        });
+
+        ScrollReveal().reveal('.stats-card-2', {
+            delay: 300,
+            distance: '50px',
+            origin: 'right'
+        });
+
+        ScrollReveal().reveal('.stats-card-3', {
+            delay: 500,
+            distance: '50px',
+            origin: 'right'
+        });
+
+        // Animação do texto das estatísticas
+        ScrollReveal().reveal('.stats-text', {
+            delay: 400,
+            distance: '30px',
+            origin: 'right'
+        });
+
+        // Animação do título dos serviços
+        ScrollReveal().reveal('.services-title', {
+            delay: 200,
+            distance: '30px',
+            origin: 'bottom'
+        });
+
+        // Animações dos cards de serviços
+        ScrollReveal().reveal('.service-card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 200
+        });
+
+        // Animações gerais para outros elementos
+        ScrollReveal().reveal('.reveal-element', {
+            delay: 200,
+            distance: '30px',
+            origin: 'bottom'
+        });
+
+        // Animação do botão floating
+        ScrollReveal().reveal('.floating', {
+            delay: 600,
+            distance: '20px',
+            origin: 'bottom'
+        });
     </script>
 </body>
 
