@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", "background-light": "#f7f7f7", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#FFFFFF", "text-dark": "#FFFFFF", highlight: "#CCCCCC", accent: "#25c5ef", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: "Inter", sans: "Inter" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
+    <style>
+        .fade-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-element.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-delay-1 { transition-delay: 0.1s; }
+        .fade-delay-2 { transition-delay: 0.2s; }
+        .fade-delay-3 { transition-delay: 0.3s; }
+        .fade-delay-4 { transition-delay: 0.4s; }
+        .hero-content { animation: fadeInUp 1s ease-out; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-hover:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px rgba(37, 197, 239, 0.2); }
+    </style>
+    <title>VMB Invest</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+</head>
+
+<body class="font-display bg-primary text-text-light" style="background-color: #161616;">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+                <div class="flex items-center gap-3 text-white">
+                    <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+                </div>
+                <nav class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-8 text-sm font-medium text-white">
+                        <a class="hover:text-accent transition-colors font-bold text-accent" href="index.html">Home</a>
+                        <a class="hover:text-accent transition-colors" href="sobre.html">Sobre Nós</a>
+                        <a class="hover:text-accent transition-colors" href="equipe.html">Equipe</a>
+                        <a class="hover:text-accent transition-colors" href="local.html">Contato</a>
+                        <a class="hover:text-accent transition-colors" href="trabalheconosco.html">Carreiras</a>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
+                        <span class="truncate">Iniciar Assessoria</span>
+                    </button>
+                </nav>
+            </header>
+            <main class="flex flex-1 flex-col items-center">
+                <div class="w-full max-w-full">
+                    <section class="mb-20">
+                        <div class="relative min-h-[520px] overflow-hidden">
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
+                                <source src="https://cdn.pixabay.com/video/2024/07/13/220941_large.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                            </div>
+                            <div
+                                class="relative flex h-full min-h-[520px] flex-col items-start justify-end p-8 md:p-12 lg:p-20">
+                                <div class="flex flex-col gap-4 text-left max-w-2xl hero-content">
+                                    <h1
+                                        class="text-white text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+                                        Construindo o Futuro Financeiro que <span class="text-accent">Você Merece</span>
+                                    </h1>
+                                    <p class="text-white/90 text-base md:text-lg">Na VMB Invest, transformamos seus
+                                        sonhos em realidade através de um planejamento financeiro sólido e
+                                        personalizado. Nossa equipe de especialistas está pronta para guiar você em cada
+                                        passo do caminho.</p>
+                                </div>
+                                <button
+                                    class="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-accent text-white text-base font-bold shadow-lg hover:bg-opacity-80 transition-all floating">
+                                    <span class="truncate">Saiba Mais</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+                        <section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div class="grid grid-cols-2 gap-4 fade-element">
+                                <div
+                                    class="col-span-2 rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-1">
+                                    <h3 class="text-4xl font-bold text-accent">750M+</h3>
+                                    <p class="text-white/80">sob gestão</p>
+                                </div>
+                                <div
+                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-2">
+                                    <h3 class="text-4xl font-bold text-accent">3700+</h3>
+                                    <p class="text-white/80">clientes</p>
+                                </div>
+                                <div
+                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover fade-element fade-delay-3">
+                                    <h3 class="text-4xl font-bold text-accent">121</h3>
+                                    <p class="text-white/80">colaboradores</p>
+                                </div>
+                            </div>
+                            <div class="text-left fade-element fade-delay-2">
+                                <h2 class="text-3xl font-bold text-white mb-4">Nossos Números Falam por Si</h2>
+                                <p class="text-lg text-white/80">Nossa trajetória de sucesso é refletida nos números que
+                                    conquistamos. A confiança depositada por nossos clientes e o crescimento contínuo de
+                                    nossos ativos sob gestão demonstram a solidez e a eficácia de nossas estratégias.
+                                    Estamos comprometidos em manter a excelência e expandir nosso impacto positivo no
+                                    futuro financeiro de cada vez mais pessoas.</p>
+                            </div>
+                        </section>
+                        <section class="mb-20">
+                            <h2 class="text-3xl font-bold text-white mb-10 text-center fade-element">Nossos Serviços</h2>
+                            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover fade-element fade-delay-1" 
+                                    style="background-color: #2a2a2a;">
+                                    <span class="material-symbols-outlined text-4xl text-accent">analytics</span>
+                                    <h3 class="text-lg font-bold text-white">Planejamento de Investimentos</h3>
+                                    <p class="text-sm text-white/70">Estratégias personalizadas para maximizar seus
+                                        investimentos.</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover fade-element fade-delay-2" 
+                                    style="background-color: #2a2a2a;">
+                                    <span
+                                        class="material-symbols-outlined text-4xl text-accent">real_estate_agent</span>
+                                    <h3 class="text-lg font-bold text-white">Planejamento Imobiliário</h3>
+                                    <p class="text-sm text-white/70">Assessoria completa para aquisição e gestão de
+                                        imóveis.</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all" style="background-color: #2a2a2a;">
+                                    <span class="material-symbols-outlined text-4xl text-accent">business_center</span>
+                                    <h3 class="text-lg font-bold text-white">Planejamento Empresarial</h3>
+                                    <p class="text-sm text-white/70">Soluções financeiras para o crescimento do seu
+                                        negócio.</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all" style="background-color: #2a2a2a;">
+                                    <span class="material-symbols-outlined text-4xl text-accent">family_restroom</span>
+                                    <h3 class="text-lg font-bold text-white">Planejamento Familiar</h3>
+                                    <p class="text-sm text-white/70">Planejamento financeiro para garantir o futuro da
+                                        sua família.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mb-20 bg-white text-black py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
+                            <div class="max-w-7xl mx-auto">
+                                <div class="flex flex-col md:flex-row justify-between items-start mb-12">
+                                    <div class="max-w-2xl">
+                                        <p class="text-accent font-semibold mb-2">Passo a passo</p>
+                                        <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4">Permita-se viver
+                                            o futuro financeiro que você sempre quis</h2>
+                                        <p class="text-gray-600 text-lg">Descubra como funcionam as etapas da nossa
+                                            consultoria de investimentos</p>
+                                    </div>
+                                    <div class="mt-6 md:mt-0 md:ml-6 flex-shrink-0">
+                                        <button
+                                            class="bg-[#25c5ef] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                                            Iniciar a Etapa 1 agora
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                                    <div
+                                        class="flex flex-col items-center text-center md:items-start md:text-left relative md:pr-4">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-accent mb-4">calendar_month</span>
+                                        <p class="text-gray-400 text-sm mb-2">1/5</p>
+                                        <h3 class="font-bold text-gray-800 mb-2">Agendamento</h3>
+                                        <p class="text-gray-500 text-sm">O primeiro passo para a sua tranquilidade
+                                            financeira.</p>
+                                        <div
+                                            class="hidden lg:block absolute top-1/2 right-0 h-1/2 w-px bg-gray-200 -translate-y-1/2">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center md:items-start md:text-left relative md:px-4">
+                                        <span class="material-symbols-outlined text-4xl text-accent mb-4">groups</span>
+                                        <p class="text-gray-400 text-sm mb-2">2/5</p>
+                                        <h3 class="font-bold text-gray-800 mb-2">Reunião Inicial</h3>
+                                        <p class="text-gray-500 text-sm">Conhecemos seus objetivos e situação atual.</p>
+                                        <div
+                                            class="hidden lg:block absolute top-1/2 right-0 h-1/2 w-px bg-gray-200 -translate-y-1/2">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center md:items-start md:text-left relative md:px-4">
+                                        <span class="material-symbols-outlined text-4xl text-accent mb-4">ballot</span>
+                                        <p class="text-gray-400 text-sm mb-2">3/5</p>
+                                        <h3 class="font-bold text-gray-800 mb-2">Diagnóstico</h3>
+                                        <p class="text-gray-500 text-sm">Análise detalhada do seu perfil e necessidades.
+                                        </p>
+                                        <div
+                                            class="hidden lg:block absolute top-1/2 right-0 h-1/2 w-px bg-gray-200 -translate-y-1/2">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center md:items-start md:text-left relative md:px-4">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-accent mb-4">bar_chart_4_bars</span>
+                                        <p class="text-gray-400 text-sm mb-2">4/5</p>
+                                        <h3 class="font-bold text-gray-800 mb-2">Reunião de Consultoria</h3>
+                                        <p class="text-gray-500 text-sm">Apresentamos o plano de investimentos ideal.
+                                        </p>
+                                        <div
+                                            class="hidden lg:block absolute top-1/2 right-0 h-1/2 w-px bg-gray-200 -translate-y-1/2">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex flex-col items-center text-center md:items-start md:text-left md:pl-4">
+                                        <span
+                                            class="material-symbols-outlined text-4xl text-accent mb-4">track_changes</span>
+                                        <p class="text-gray-400 text-sm mb-2">5/5</p>
+                                        <h3 class="font-bold text-gray-800 mb-2">Acompanhamento</h3>
+                                        <p class="text-gray-500 text-sm">Monitoramento contínuo para otimizar
+                                            resultados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mb-20">
+                            <h2 class="text-3xl font-bold text-white mb-10 text-center">Depoimentos de Nossos Clientes
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    <div class="w-full aspect-square bg-cover rounded-lg bg-center"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
+                                    </div>
+                                    <p class="text-white/80 italic">"A VMB Invest transformou minha visão sobre
+                                        investimentos. O planejamento personalizado me deu segurança para alcançar meus
+                                        objetivos."</p>
+                                    <p class="font-bold text-accent text-right">- Ana Silva</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    <div class="w-full aspect-square bg-cover rounded-lg bg-center"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
+                                    </div>
+                                    <p class="text-white/80 italic">"A consultoria empresarial da VMB Invest foi
+                                        fundamental para o crescimento da minha empresa. Recomendo a todos!"</p>
+                                    <p class="font-bold text-accent text-right">- Carlos Pereira</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm" style="background-color: #2a2a2a;">
+                                    <div class="w-full aspect-square bg-cover rounded-lg bg-center"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
+                                    </div>
+                                    <p class="text-white/80 italic">"O planejamento familiar da VMB Invest me
+                                        proporcionou tranquilidade para o futuro dos meus filhos. Sou muito grata!"</p>
+                                    <p class="font-bold text-accent text-right">- Fernanda Costa</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="bg-gray-50 text-gray-800 py-20 sm:py-24">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                                <div class="flex flex-col gap-4">
+                                    <p class="text-accent font-semibold">Quem somos</p>
+                                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Construa seu
+                                        legado com uma consultoria de confiança</h2>
+                                    <p class="text-gray-600 text-lg">Nosso propósito é fazer parte de todas as grandes
+                                        conquistas da vida das pessoas e contribuir para o desenvolvimento de negócios e
+                                        empresas.</p>
+                                </div>
+                                <div>
+                                    <img alt="Sede da empresa VMB Invest" class="rounded-lg shadow-lg"
+                                        src="https://lh3.googleusercontent.com/p/AF1QipNRFVDLJL9zODYONNvYfw9w_RFZBJGsVAzF_A9r=s1360-w1360-h1020-rw"
+                                        style="aspect-ratio: 550 / 367; object-fit: cover;" />
+                                </div>
+                            </div>
+                            <div class="mt-16 lg:mt-24">
+                                <div class="text-center mb-12">
+                                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Valores que constroem
+                                        propósitos</h3>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                                    <div class="flex flex-col items-center text-center">
+                                        <div
+                                            class="flex items-center justify-center h-16 w-16 rounded-full bg-accent/10 mb-4">
+                                            <span class="material-symbols-outlined text-3xl text-accent">groups</span>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">União que faz acontecer</h4>
+                                        <p class="text-gray-600">Acreditamos no poder da colaboração para alcançar
+                                            resultados extraordinários.</p>
+                                    </div>
+                                    <div class="flex flex-col items-center text-center">
+                                        <div
+                                            class="flex items-center justify-center h-16 w-16 rounded-full bg-accent/10 mb-4">
+                                            <span
+                                                class="material-symbols-outlined text-3xl text-accent">lightbulb</span>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Protagonismo inovador</h4>
+                                        <p class="text-gray-600">Buscamos constantemente soluções criativas e eficazes
+                                            para os desafios financeiros.</p>
+                                    </div>
+                                    <div class="flex flex-col items-center text-center">
+                                        <div
+                                            class="flex items-center justify-center h-16 w-16 rounded-full bg-accent/10 mb-4">
+                                            <span
+                                                class="material-symbols-outlined text-3xl text-accent">track_changes</span>
+                                        </div>
+                                        <h4 class="text-lg font-bold text-gray-900 mb-2">Orientar e aprimorar</h4>
+                                        <p class="text-gray-600">Nosso compromisso é guiar e capacitar nossos clientes
+                                            para as melhores decisões.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
+                        <section class="py-16 bg-accent/10 rounded-xl mb-20 mt-10">
+                            <div class="flex flex-col items-center justify-center gap-6 px-4 text-center">
+                                <h2 class="text-3xl font-extrabold text-white max-w-2xl">Dê o Próximo Passo Rumo ao Seu
+                                    Futuro Financeiro</h2>
+                                <button
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-accent text-white text-base font-bold shadow-lg hover:bg-opacity-80 transition-all">
+                                    <span class="truncate">Agendar Consultoria</span>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer class="border-t border-white/20 py-8">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6">
+                    <div
+                        class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-medium text-white/70">
+                        <a class="hover:text-accent transition-colors" href="index.html">Home</a>
+                        <a class="hover:text-accent transition-colors" href="sobre.html">Sobre Nós</a>
+                        <a class="hover:text-accent transition-colors" href="equipe.html">Equipe</a>
+                        <a class="hover:text-accent transition-colors" href="local.html">Contato</a>
+                        <a class="hover:text-accent transition-colors" href="trabalheconosco.html">Carreiras</a>
+                    </div>
+                    <div class="flex justify-center gap-6">
+                        <a class="text-white/60 hover:text-accent transition-colors" href="#">
+                            <svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-white/60 hover:text-accent transition-colors" href="#">
+                            <svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-sm text-white/60">© 2024 VMB Invest. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        // Função de fade-in no scroll
+        function fadeInOnScroll() {
+            const elements = document.querySelectorAll('.fade-element');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Executar no carregamento e no scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Executar imediatamente para elementos visíveis
+        fadeInOnScroll();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+/* VMB Invest - Estilo Global */
+/* Paleta de Cores Padronizada: Preto (#161616), Azul (#25c5ef), Branco (#ffffff) */
+
+:root {
+  --color-primary: #161616;
+  --color-accent: #25c5ef;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #2a2a2a;
+  --color-gray-900: #0a0a0a;
+}
+
+/* Configuração base do corpo */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+/* Links de navegação */
+.nav-link {
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Formulários */
+.form-input {
+  background-color: var(--color-gray-800);
+  border: 1px solid var(--color-gray-600);
+  color: var(--color-white);
+}
+
+.form-input:focus {
+  border-color: var(--color-accent);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-gray-900);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+}

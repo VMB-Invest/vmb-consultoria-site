@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <title>VMB Invest</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#000000", "text-dark": "#ffffff", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: "Inter", sans: "Inter" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
+    <style>
+        .fade-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-element.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-delay-1 { transition-delay: 0.1s; }
+        .fade-delay-2 { transition-delay: 0.2s; }
+        .fade-delay-3 { transition-delay: 0.3s; }
+        .text-glow:hover { text-shadow: 0 0 20px rgba(37, 197, 239, 0.5); }
+    </style>
+</head>
+
+<body class="font-display text-white" style="background-color: #161616;">
+    <div class="flex min-h-screen w-full flex-col">
+                <header class="flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10 py-4">
+            <div class="flex items-center gap-3 text-white">
+                <img src="https://vmbinvest.com.br/wp-content/uploads/2022/12/marca-vmb.png" alt="VMB Invest" class="h-10 w-auto">
+            </div>
+            <nav class="flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-8 text-sm font-medium text-white">
+                    <a class="hover:text-accent transition-colors" href="index.html">Home</a>
+                    <a class="hover:text-accent transition-colors font-bold text-accent" href="sobre.html">Sobre Nós</a>
+                    <a class="hover:text-accent transition-colors" href="equipe.html">Equipe</a>
+                    <a class="hover:text-accent transition-colors" href="local.html">Contato</a>
+                    <a class="hover:text-accent transition-colors" href="trabalheconosco.html">Carreiras</a>
+                </div>
+                <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
+                    <span class="truncate">Iniciar Assessoria</span>
+                </button>
+            </nav>
+        </header>
+        <main class="flex-1">
+            <div class="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuoDCi8YHzfFKIE6rtabdsmW7r3o7j5yA4YIx3lh4oqbwz1cRIpDboJ3mqu--tIMXOsx0hewLXlN8Yzjl-DzOfUkYjxRG02SSgEWB5BMYtYyJswNM95s0DO7MZTypT1MG_etwDE5QOa-GxRpF77r_mZnoT1kufNiZF2ADScQYxxiDnlU1T_SqIqRSrmVofY_i8Xdvnun1HSSnmgxCz34WSDHeT8_lAEIbJ_O6scgkFv2_vfVROyq-8rrs4olexnyHV7bQ9BvScN8xs");'>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-element">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">Nossa <span
+                            class="text-accent">História</span></h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-white/90 fade-element fade-delay-2">Construindo futuros financeiros sólidos com
+                        confiança e expertise.</p>
+                </div>
+            </div>
+            <div class="py-16 sm:py-24 lg:py-32" style="background-color: #2a2a2a;">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-12">
+                    <div class="space-y-4 fade-element">
+                        <h2 class="text-3xl font-bold tracking-tight text-accent">Quem Somos</h2>
+                        <p class="text-lg leading-relaxed text-white/80">
+                            Na VMB Invest, somos uma equipe de especialistas apaixonados por ajudar nossos clientes a
+                            alcançar seus objetivos financeiros. Com anos de experiência no mercado
+                            financeiro, oferecemos soluções personalizadas e estratégias inovadoras para garantir o
+                            sucesso de seus investimentos.
+                        </p>
+                    </div>
+                    <div class="space-y-4 fade-element fade-delay-1">
+                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossa Missão</h2>
+                        <p class="text-lg leading-relaxed text-white/80">
+                            Nossa missão é proporcionar aos nossos clientes um futuro financeiro sólido e próspero,
+                            através de um planejamento financeiro inteligente e investimentos
+                            estratégicos. Buscamos sempre a excelência em nossos serviços, com foco na transparência,
+                            ética e resultados.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossa Visão</h2>
+                        <p class="text-lg leading-relaxed text-white/80">
+                            Almejamos ser reconhecidos como a principal referência em investimentos e planejamento
+                            financeiro, destacando-nos pela qualidade de nossos serviços, inovação e
+                            compromisso com o sucesso de nossos clientes. Queremos construir relações duradouras,
+                            baseadas na confiança e no respeito.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossos Valores</h2>
+                        <p class="text-lg leading-relaxed text-white/80">
+                            Nossos valores são o alicerce de nosso trabalho e refletem nosso compromisso com nossos
+                            clientes e com o mercado. Acreditamos na ética, transparência,
+                            responsabilidade, inovação e excelência em tudo o que fazemos. Buscamos sempre superar as
+                            expectativas, oferecendo soluções personalizadas e resultados consistentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Função de fade-in no scroll
+        function fadeInOnScroll() {
+            const elements = document.querySelectorAll('.fade-element');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Executar no carregamento e no scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Executar imediatamente para elementos visíveis
+        fadeInOnScroll();
+    </script>
+</body>
+
+</html>
