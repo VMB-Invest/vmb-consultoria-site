@@ -23,12 +23,19 @@
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="flex min-h-screen w-full flex-col">
-        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10"
+        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0"
             style="background-color: #0D0D09;">
             <div class="flex items-center gap-3 text-white">
-                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
+                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-32">
             </div>
-            <nav class="flex flex-1 justify-end gap-8">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex-1 justify-end gap-8">
                 <div class="flex items-center gap-8 text-sm text-white">
                     <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
                     <a class="hover:text-accent transition-colors font-thin text-accent" href="sobre.html">Sobre Nós</a>
@@ -42,52 +49,66 @@
                 </button>
             </nav>
         </header>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0D0D09] border-b border-white/20">
+            <nav class="flex flex-col px-4 py-4 space-y-4">
+                <a class="hover:text-accent transition-colors font-thin py-2" href="index.html">Home</a>
+                <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="sobre.html">Sobre Nós</a>
+                <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
+                <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
+                <a class="hover:text-accent transition-colors font-thin py-2" href="trabalheconosco.html">Carreiras</a>
+                <button
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
+                    <span class="truncate">Iniciar Assessoria</span>
+                </button>
+            </nav>
+        </div>
         <main class="flex-1">
-            <div class="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center">
+            <div class="relative min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center justify-center">
                 <div class="absolute inset-0 bg-cover bg-center"
                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuoDCi8YHzfFKIE6rtabdsmW7r3o7j5yA4YIx3lh4oqbwz1cRIpDboJ3mqu--tIMXOsx0hewLXlN8Yzjl-DzOfUkYjxRG02SSgEWB5BMYtYyJswNM95s0DO7MZTypT1MG_etwDE5QOa-GxRpF77r_mZnoT1kufNiZF2ADScQYxxiDnlU1T_SqIqRSrmVofY_i8Xdvnun1HSSnmgxCz34WSDHeT8_lAEIbJ_O6scgkFv2_vfVROyq-8rrs4olexnyHV7bQ9BvScN8xs");'>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
                 <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-element">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">
                         Nossa <span class="text-accent">História</span></h1>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-white/90 fade-element fade-delay-2">Construindo
+                    <p class="mt-3 md:mt-4 max-w-2xl mx-auto text-base sm:text-lg text-white/90 fade-element fade-delay-2">Construindo
                         futuros financeiros sólidos com
                         confiança e expertise.</p>
                 </div>
             </div>
-            <div class="py-16 sm:py-24 lg:py-32" style="background-color: #2a2a2a;">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-12">
-                    <div class="space-y-4 fade-element">
-                        <h2 class="text-3xl font-bold tracking-tight text-accent">Quem Somos</h2>
-                        <p class="text-lg leading-relaxed text-white/80">
+            <div class="py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #2a2a2a;">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-8 md:space-y-12">
+                    <div class="space-y-3 md:space-y-4 fade-element">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Quem Somos</h2>
+                        <p class="text-base md:text-lg leading-relaxed text-white/80">
                             Na VMB Invest, somos uma equipe de especialistas apaixonados por ajudar nossos clientes a
                             alcançar seus objetivos financeiros. Com anos de experiência no mercado
                             financeiro, oferecemos soluções personalizadas e estratégias inovadoras para garantir o
                             sucesso de seus investimentos.
                         </p>
                     </div>
-                    <div class="space-y-4 fade-element fade-delay-1">
-                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossa Missão</h2>
-                        <p class="text-lg leading-relaxed text-white/80">
+                    <div class="space-y-3 md:space-y-4 fade-element fade-delay-1">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossa Missão</h2>
+                        <p class="text-base md:text-lg leading-relaxed text-white/80">
                             Nossa missão é proporcionar aos nossos clientes um futuro financeiro sólido e próspero,
                             através de um planejamento financeiro inteligente e investimentos
                             estratégicos. Buscamos sempre a excelência em nossos serviços, com foco na transparência,
                             ética e resultados.
                         </p>
                     </div>
-                    <div class="space-y-4">
-                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossa Visão</h2>
-                        <p class="text-lg leading-relaxed text-white/80">
+                    <div class="space-y-3 md:space-y-4">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossa Visão</h2>
+                        <p class="text-base md:text-lg leading-relaxed text-white/80">
                             Almejamos ser reconhecidos como a principal referência em investimentos e planejamento
                             financeiro, destacando-nos pela qualidade de nossos serviços, inovação e
                             compromisso com o sucesso de nossos clientes. Queremos construir relações duradouras,
                             baseadas na confiança e no respeito.
                         </p>
                     </div>
-                    <div class="space-y-4">
-                        <h2 class="text-3xl font-bold tracking-tight text-accent">Nossos Valores</h2>
-                        <p class="text-lg leading-relaxed text-white/80">
+                    <div class="space-y-3 md:space-y-4">
+                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossos Valores</h2>
+                        <p class="text-base md:text-lg leading-relaxed text-white/80">
                             Nossos valores são o alicerce de nosso trabalho e refletem nosso compromisso com nossos
                             clientes e com o mercado. Acreditamos na ética, transparência,
                             responsabilidade, inovação e excelência em tudo o que fazemos. Buscamos sempre superar as
@@ -100,6 +121,12 @@
     </div>
 
     <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
         // Função de fade-in no scroll
         function fadeInOnScroll() {
             const elements = document.querySelectorAll('.fade-element');

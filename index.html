@@ -24,11 +24,18 @@
 <body class="font-display bg-primary text-text-light" style="background-color: #161616;">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
         <div class="flex h-full grow flex-col">
-            <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-10">
+            <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0">
                 <div class="flex items-center gap-3 text-white">
-                    <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-32">
+                    <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-32">
                 </div>
-                <nav class="flex flex-1 justify-end gap-8">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex flex-1 justify-end gap-8">
                     <div class="flex items-center gap-8 text-sm text-white">
                         <a class="hover:text-accent transition-colors font-thin text-accent" href="index.html">Home</a>
                         <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
@@ -42,116 +49,130 @@
                     </button>
                 </nav>
             </header>
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-[#0D0D09] border-b border-white/20">
+                <nav class="flex flex-col px-4 py-4 space-y-4">
+                    <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="index.html">Home</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="sobre.html">Sobre Nós</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="trabalheconosco.html">Carreiras</a>
+                    <button
+                        class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
+                        <span class="truncate">Iniciar Assessoria</span>
+                    </button>
+                </nav>
+            </div>
             <main class="flex flex-1 flex-col items-center">
                 <div class="w-full max-w-full">
-                    <section class="mb-20">
-                        <div class="relative min-h-[520px] overflow-hidden">
-                            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
+                    <section class="mb-12 md:mb-20">
+                        <div class="relative min-h-[400px] md:min-h-[520px] overflow-hidden">
+                            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
                                 <source src="./INSTITUCIONAL.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                             </div>
                             <div
-                                class="relative flex h-full min-h-[520px] flex-col items-start justify-end p-8 md:p-12 lg:p-20">
-                                <div class="flex flex-col gap-4 text-left max-w-2xl hero-content">
+                                class="relative flex h-full min-h-[400px] md:min-h-[520px] flex-col items-start justify-end p-4 sm:p-6 md:p-12 lg:p-20">
+                                <div class="flex flex-col gap-3 md:gap-4 text-left max-w-2xl hero-content">
                                     <h1
-                                        class="text-white text-4xl font-medium leading-tight tracking-tight md:text-5xl">
+                                        class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">
                                         Construindo o Futuro Financeiro que <span class="text-accent">Você Merece</span>
                                     </h1>
-                                    <p class="text-white/90 text-base md:text-lg">Na VMB Invest, transformamos seus
+                                    <p class="text-white/90 text-sm sm:text-base md:text-lg">Na VMB Invest, transformamos seus
                                         sonhos em realidade através de um planejamento financeiro sólido e
                                         personalizado. Nossa equipe de especialistas está pronta para guiar você em cada
                                         passo do caminho.</p>
                                 </div>
                                 <button
-                                    class="mt-8 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-accent text-white text-base font-bold shadow-lg hover:bg-opacity-80 transition-all floating">
+                                    class="mt-6 md:mt-8 flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-6 sm:px-8 bg-accent text-white text-sm sm:text-base font-bold shadow-lg hover:bg-opacity-80 transition-all floating">
                                     <span class="truncate">Saiba Mais</span>
                                 </button>
                             </div>
                         </div>
                     </section>
                     <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
-                        <section class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                            <div class="grid grid-cols-2 gap-4">
+                        <section class="mb-12 md:mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+                            <div class="grid grid-cols-2 gap-3 md:gap-4 order-2 md:order-1">
                                 <div
-                                    class="col-span-2 rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-1">
-                                    <h3 class="text-4xl font-bold text-accent">750M+</h3>
-                                    <p class="text-white/80">sob gestão</p>
+                                    class="col-span-2 rounded-xl bg-white/10 p-4 md:p-6 flex flex-col justify-center items-center text-center card-hover stats-card-1">
+                                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">750M+</h3>
+                                    <p class="text-sm md:text-base text-white/80">sob gestão</p>
                                 </div>
                                 <div
-                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-2">
-                                    <h3 class="text-4xl font-bold text-accent">3700+</h3>
-                                    <p class="text-white/80">clientes</p>
+                                    class="rounded-xl bg-white/10 p-4 md:p-6 flex flex-col justify-center items-center text-center card-hover stats-card-2">
+                                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">3700+</h3>
+                                    <p class="text-sm md:text-base text-white/80">clientes</p>
                                 </div>
                                 <div
-                                    class="rounded-xl bg-white/10 p-6 flex flex-col justify-center items-center text-center card-hover stats-card-3">
-                                    <h3 class="text-4xl font-bold text-accent">121</h3>
-                                    <p class="text-white/80">colaboradores</p>
+                                    class="rounded-xl bg-white/10 p-4 md:p-6 flex flex-col justify-center items-center text-center card-hover stats-card-3">
+                                    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">121</h3>
+                                    <p class="text-sm md:text-base text-white/80">colaboradores</p>
                                 </div>
                             </div>
-                            <div class="text-left stats-text">
-                                <h2 class="text-3xl font-bold text-white mb-4 reveal-element">Nossos Números Falam por Si</h2>
-                                <p class="text-lg text-white/80">Nossa trajetória de sucesso é refletida nos números que
+                            <div class="text-left md:text-left stats-text order-1 md:order-2">
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3 md:mb-4 reveal-element">Nossos Números Falam por Si</h2>
+                                <p class="text-base md:text-lg text-white/80">Nossa trajetória de sucesso é refletida nos números que
                                     conquistamos. A confiança depositada por nossos clientes e o crescimento contínuo de
                                     nossos ativos sob gestão demonstram a solidez e a eficácia de nossas estratégias.
                                     Estamos comprometidos em manter a excelência e expandir nosso impacto positivo no
                                     futuro financeiro de cada vez mais pessoas.</p>
                             </div>
                         </section>
-                        <section class="mb-20">
-                            <h2 class="text-3xl font-bold text-white mb-10 text-center services-title">Nossos Serviços</h2>
-                            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <section class="mb-12 md:mb-20">
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 md:mb-10 text-center services-title">Nossos Serviços</h2>
+                            <div class="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4">
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl border border-white/10 p-4 md:p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
                                     style="background-color: #2a2a2a;">
-                                    <span class="material-symbols-outlined text-4xl text-accent">analytics</span>
-                                    <h3 class="text-lg font-bold text-white">Planejamento de Investimentos</h3>
+                                    <span class="material-symbols-outlined text-3xl md:text-4xl text-accent">analytics</span>
+                                    <h3 class="text-base md:text-lg font-bold text-white">Planejamento de Investimentos</h3>
                                     <p class="text-sm text-white/70">Estratégias personalizadas para maximizar seus
                                         investimentos.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl border border-white/10 p-4 md:p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" 
                                     style="background-color: #2a2a2a;">
                                     <span
-                                        class="material-symbols-outlined text-4xl text-accent">real_estate_agent</span>
-                                    <h3 class="text-lg font-bold text-white">Planejamento Imobiliário</h3>
+                                        class="material-symbols-outlined text-3xl md:text-4xl text-accent">real_estate_agent</span>
+                                    <h3 class="text-base md:text-lg font-bold text-white">Planejamento Imobiliário</h3>
                                     <p class="text-sm text-white/70">Assessoria completa para aquisição e gestão de
                                         imóveis.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
-                                    <span class="material-symbols-outlined text-4xl text-accent">business_center</span>
-                                    <h3 class="text-lg font-bold text-white">Planejamento Empresarial</h3>
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl border border-white/10 p-4 md:p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
+                                    <span class="material-symbols-outlined text-3xl md:text-4xl text-accent">business_center</span>
+                                    <h3 class="text-base md:text-lg font-bold text-white">Planejamento Empresarial</h3>
                                     <p class="text-sm text-white/70">Soluções financeiras para o crescimento do seu
                                         negócio.</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl border border-white/10 p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
-                                    <span class="material-symbols-outlined text-4xl text-accent">family_restroom</span>
-                                    <h3 class="text-lg font-bold text-white">Planejamento Familiar</h3>
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl border border-white/10 p-4 md:p-6 text-center items-center shadow-sm hover:shadow-lg hover:border-accent transition-all card-hover service-card" style="background-color: #2a2a2a;">
+                                    <span class="material-symbols-outlined text-3xl md:text-4xl text-accent">family_restroom</span>
+                                    <h3 class="text-base md:text-lg font-bold text-white">Planejamento Familiar</h3>
                                     <p class="text-sm text-white/70">Planejamento financeiro para garantir o futuro da
                                         sua família.</p>
                                 </div>
                             </div>
                         </section>
-                        <section class="mb-20 bg-white text-black py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
+                        <section class="mb-12 md:mb-20 bg-white text-black py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 rounded-xl">
                             <div class="max-w-7xl mx-auto">
-                                <div class="flex flex-col md:flex-row justify-between items-start mb-12">
+                                <div class="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-4">
                                     <div class="max-w-2xl">
-                                        <p class="text-accent font-semibold mb-2">Passo a passo</p>
-                                        <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4">Permita-se viver
+                                        <p class="text-accent font-semibold mb-2 text-sm md:text-base">Passo a passo</p>
+                                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-3 md:mb-4">Permita-se viver
                                             o futuro financeiro que você sempre quis</h2>
-                                        <p class="text-gray-600 text-lg">Descubra como funcionam as etapas da nossa
+                                        <p class="text-gray-600 text-base md:text-lg">Descubra como funcionam as etapas da nossa
                                             consultoria de investimentos</p>
                                     </div>
-                                    <div class="mt-6 md:mt-0 md:ml-6 flex-shrink-0">
+                                    <div class="w-full md:w-auto md:mt-0 md:ml-6 flex-shrink-0">
                                         <button
-                                            class="bg-[#25c5ef] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                                            class="w-full md:w-auto bg-[#25c5ef] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
                                             Iniciar a Etapa 1 agora
                                         </button>
                                     </div>
                                 </div>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
                                     <div
                                         class="flex flex-col items-center text-center md:items-start md:text-left relative md:pr-4">
                                         <span
@@ -209,64 +230,64 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="mb-20">
-                            <h2 class="text-3xl font-bold text-white mb-10 text-center reveal-element">Depoimentos de Nossos Clientes
+                        <section class="mb-12 md:mb-20">
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6 md:mb-10 text-center reveal-element">Depoimentos de Nossos Clientes
                             </h2>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
-                                    <p class="text-white/80 italic">"A VMB Invest transformou minha visão sobre
+                                    <p class="text-sm md:text-base text-white/80 italic">"A VMB Invest transformou minha visão sobre
                                         investimentos. O planejamento personalizado me deu segurança para alcançar meus
                                         objetivos."</p>
-                                    <p class="font-bold text-accent text-right">- Ana Silva</p>
+                                    <p class="text-sm md:text-base font-bold text-accent text-right">- Ana Silva</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
-                                    <p class="text-white/80 italic">"A consultoria empresarial da VMB Invest foi
+                                    <p class="text-sm md:text-base text-white/80 italic">"A consultoria empresarial da VMB Invest foi
                                         fundamental para o crescimento da minha empresa. Recomendo a todos!"</p>
-                                    <p class="font-bold text-accent text-right">- Carlos Pereira</p>
+                                    <p class="text-sm md:text-base font-bold text-accent text-right">- Carlos Pereira</p>
                                 </div>
                                 <div
-                                    class="flex flex-col gap-4 rounded-xl p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
+                                    class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm reveal-element" style="background-color: #2a2a2a;">
                                     <div class="w-full aspect-square bg-cover rounded-lg bg-center"
                                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyvoSLcdvOBSenV2UEDY9ZP_bcN0D5X7dGLdflYXHV93zgibOhqmrGWt41qzmXLwyXmbWYDK12EAcIGjAQx9SlV-HA2WR8L5wpMqmHcgLGd48gJNVL6td0rGExwgMsQEup74AG5dqy2PIL_zexwVpAazXDLLbLlhzS2OWzjddscot5ZPGaY8XQcw3Oj9FVJQPxUs-LMGcwR_P15iS3gDCT2irBQu6aZ7nS5Rv5kV4C5OneAgBN5_79MRaOja_cThdW1OnJpF39gBNL')">
                                     </div>
-                                    <p class="text-white/80 italic">"O planejamento familiar da VMB Invest me
+                                    <p class="text-sm md:text-base text-white/80 italic">"O planejamento familiar da VMB Invest me
                                         proporcionou tranquilidade para o futuro dos meus filhos. Sou muito grata!"</p>
-                                    <p class="font-bold text-accent text-right">- Fernanda Costa</p>
+                                    <p class="text-sm md:text-base font-bold text-accent text-right">- Fernanda Costa</p>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <section class="bg-gray-50 text-gray-800 py-20 sm:py-24">
+                    <section class="bg-gray-50 text-gray-800 py-12 sm:py-16 md:py-20 lg:py-24">
                         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                                <div class="flex flex-col gap-4">
-                                    <p class="text-accent font-semibold">Quem somos</p>
-                                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Construa seu
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+                                <div class="flex flex-col gap-3 md:gap-4">
+                                    <p class="text-accent font-semibold text-sm md:text-base">Quem somos</p>
+                                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Construa seu
                                         legado com uma consultoria de confiança</h2>
-                                    <p class="text-gray-600 text-lg">Nosso propósito é fazer parte de todas as grandes
+                                    <p class="text-gray-600 text-base md:text-lg">Nosso propósito é fazer parte de todas as grandes
                                         conquistas da vida das pessoas e contribuir para o desenvolvimento de negócios e
                                         empresas.</p>
                                 </div>
                                 <div>
-                                    <img alt="Sede da empresa VMB Invest" class="rounded-lg shadow-lg"
+                                    <img alt="Sede da empresa VMB Invest" class="rounded-lg shadow-lg w-full"
                                         src="https://lh3.googleusercontent.com/p/AF1QipNRFVDLJL9zODYONNvYfw9w_RFZBJGsVAzF_A9r=s1360-w1360-h1020-rw"
                                         style="aspect-ratio: 550 / 367; object-fit: cover;" />
                                 </div>
                             </div>
-                            <div class="mt-16 lg:mt-24">
-                                <div class="text-center mb-12">
-                                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Valores que constroem
+                            <div class="mt-12 md:mt-16 lg:mt-24">
+                                <div class="text-center mb-8 md:mb-12">
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">Valores que constroem
                                         propósitos</h3>
                                 </div>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
                                     <div class="flex flex-col items-center text-center">
                                         <div
                                             class="flex items-center justify-center h-16 w-16 rounded-full bg-accent/10 mb-4">
@@ -300,13 +321,13 @@
                             </div>
                         </div>
                     </section>
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  ">
-                        <section class="py-16 bg-accent/10 rounded-xl mb-20 mt-10">
-                            <div class="flex flex-col items-center justify-center gap-6 px-4 text-center">
-                                <h2 class="text-3xl font-extrabold text-white max-w-2xl">Dê o Próximo Passo Rumo ao Seu
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <section class="py-8 sm:py-12 md:py-16 bg-accent/10 rounded-xl mb-12 md:mb-20 mt-8 md:mt-10">
+                            <div class="flex flex-col items-center justify-center gap-4 md:gap-6 px-4 text-center">
+                                <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white max-w-2xl">Dê o Próximo Passo Rumo ao Seu
                                     Futuro Financeiro</h2>                               
                                 <button
-                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-accent text-white text-base font-bold shadow-lg hover:bg-opacity-80 transition-all">
+                                    class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-6 sm:px-8 bg-accent text-white text-sm sm:text-base font-bold shadow-lg hover:bg-opacity-80 transition-all">
                                     <span class="truncate">Agendar Consultoria</span>
                                 </button>
                             </div>
@@ -314,17 +335,17 @@
                     </div>
                 </div>
             </main>
-            <footer class="border-t border-white/20 py-8">
-                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6">
+            <footer class="border-t border-white/20 py-6 md:py-8">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-4 md:gap-6">
                     <div
-                        class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-medium text-white/70">
+                        class="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-3 md:gap-y-4 text-xs sm:text-sm font-medium text-white/70">
                         <a class="hover:text-accent transition-colors" href="index.html">Home</a>
                         <a class="hover:text-accent transition-colors" href="sobre.html">Sobre Nós</a>
                         <a class="hover:text-accent transition-colors" href="equipe.html">Equipe</a>
                         <a class="hover:text-accent transition-colors" href="local.html">Contato</a>
                         <a class="hover:text-accent transition-colors" href="trabalheconosco.html">Carreiras</a>
                     </div>
-                    <div class="flex justify-center gap-6">
+                    <div class="flex justify-center gap-4 md:gap-6">
                         <a class="text-white/60 hover:text-accent transition-colors" href="#">
                             <svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -342,13 +363,19 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="text-sm text-white/60">© 2024 VMB Invest. Todos os direitos reservados.</p>
+                    <p class="text-xs sm:text-sm text-white/60">© 2024 VMB Invest. Todos os direitos reservados.</p>
                 </div>
             </footer>
         </div>
     </div>
     
     <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
         // Configuração do ScrollReveal
         ScrollReveal({
             distance: '60px',
