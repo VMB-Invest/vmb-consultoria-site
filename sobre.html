@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="utf-8" />
@@ -11,6 +11,8 @@
         rel="stylesheet">
     <title>VMB Invest</title>
     <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#161616", accent: "#25c5ef", "background-light": "#ffffff", "background-dark": "#161616", "background-darker": "#0a0a0a", "text-light": "#000000", "text-dark": "#ffffff", "border-light": "#e5e7eb", "border-dark": "#374151", "gray-custom": "#2a2a2a", "gray-light": "#404040" }, fontFamily: { display: ["Roboto Flex", "sans-serif"], sans: ["Roboto Flex", "sans-serif"] }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
@@ -18,20 +20,58 @@
         .text-glow:hover {
             text-shadow: 0 0 20px rgba(37, 197, 239, 0.5);
         }
+        
+        /* Estilos para o carrossel de imagens */
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #25c5ef;
+            width: 12px;
+            height: 12px;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #25c5ef;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="flex min-h-screen w-full flex-col">
-        <header class="header-bg flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0"
-            style="background-color: #0D0D09;">
+        <header
+            class="bg-black flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0">
             <div class="flex items-center gap-3 text-white">
-                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-32">
+                <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-36">
             </div>
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-white p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
             <!-- Desktop Navigation -->
@@ -53,7 +93,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-[#0D0D09] border-b border-white/20">
             <nav class="flex flex-col px-4 py-4 space-y-4">
                 <a class="hover:text-accent transition-colors font-thin py-2" href="index.html">Home</a>
-                <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="sobre.html">Sobre Nós</a>
+                <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="sobre.html">Sobre
+                    Nós</a>
                 <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
                 <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
                 <a class="hover:text-accent transition-colors font-thin py-2" href="trabalheconosco.html">Carreiras</a>
@@ -66,67 +107,208 @@
         <main class="flex-1">
             <div class="relative min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center justify-center">
                 <div class="absolute inset-0 bg-cover bg-center"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuoDCi8YHzfFKIE6rtabdsmW7r3o7j5yA4YIx3lh4oqbwz1cRIpDboJ3mqu--tIMXOsx0hewLXlN8Yzjl-DzOfUkYjxRG02SSgEWB5BMYtYyJswNM95s0DO7MZTypT1MG_etwDE5QOa-GxRpF77r_mZnoT1kufNiZF2ADScQYxxiDnlU1T_SqIqRSrmVofY_i8Xdvnun1HSSnmgxCz34WSDHeT8_lAEIbJ_O6scgkFv2_vfVROyq-8rrs4olexnyHV7bQ9BvScN8xs");'>
+                    style='background-image: url("./assets/NOSSA HISTÓRIA/foto bg - advisor .jpg");'>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
                 <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center fade-element">
-                    <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white text-glow">
                         Nossa <span class="text-accent">História</span></h1>
-                    <p class="mt-3 md:mt-4 max-w-2xl mx-auto text-base sm:text-lg text-white/90 fade-element fade-delay-2">Construindo
+                    <p
+                        class="mt-3 md:mt-4 max-w-2xl mx-auto text-base sm:text-lg text-white/90 fade-element fade-delay-2">
+                        Construindo
                         futuros financeiros sólidos com
                         confiança e expertise.</p>
                 </div>
             </div>
-            <div class="py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #2a2a2a;">
-                <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-8 md:space-y-12">
-                    <div class="space-y-3 md:space-y-4 fade-element">
-                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Quem Somos</h2>
-                        <p class="text-base md:text-lg leading-relaxed text-white/80">
-                            Na VMB Invest, somos uma equipe de especialistas apaixonados por ajudar nossos clientes a
-                            alcançar seus objetivos financeiros. Com anos de experiência no mercado
-                            financeiro, oferecemos soluções personalizadas e estratégias inovadoras para garantir o
-                            sucesso de seus investimentos.
+            <!-- Seção Quem Somos com layout moderno -->
+            <div class="w-full py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #2a2a2a;">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Título da seção -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-accent mb-4">Quem Somos</h2>
+                        <div class="w-24 h-1 bg-accent mx-auto"></div>
+                    </div>
+                    
+                    <!-- Layout com duas colunas -->
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                        <!-- Coluna de texto -->
+                        <div class="md:w-1/2 space-y-8">
+                            <div class="space-y-3 md:space-y-4 fade-element">
+                                <p class="text-base md:text-lg leading-relaxed text-white/80">
+                                    Na VMB Invest, somos uma equipe de especialistas apaixonados por ajudar nossos clientes a
+                                    alcançar seus objetivos financeiros. Com anos de experiência no mercado
+                                    financeiro, oferecemos soluções personalizadas e estratégias inovadoras para garantir o
+                                    sucesso de seus investimentos.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 md:space-y-4 fade-element">
+                                <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-accent">Nossa Missão</h3>
+                                <p class="text-base md:text-lg leading-relaxed text-white/80">
+                                    Nossa missão é proporcionar aos nossos clientes um futuro financeiro sólido e próspero,
+                                    através de um planejamento financeiro inteligente e investimentos
+                                    estratégicos. Buscamos sempre a excelência em nossos serviços, com foco na transparência,
+                                    ética e resultados.
+                                </p>
+                            </div>
+                            
+                            <div class="space-y-3 md:space-y-4 fade-element">
+                                <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-accent">Nossa Visão</h3>
+                                <p class="text-base md:text-lg leading-relaxed text-white/80">
+                                    Almejamos ser reconhecidos como a principal referência em investimentos e planejamento
+                                    financeiro, destacando-nos pela qualidade de nossos serviços, inovação e
+                                    compromisso com o sucesso de nossos clientes.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Coluna da imagem -->
+                        <div class="md:w-1/2 flex justify-center">
+                            <img src="./assets/SOBRE NÓS/trofeu.jpg" alt="Nossa conquista" 
+                                class="rounded-lg shadow-lg max-w-full h-auto object-cover fade-element" 
+                                style="max-height: 500px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Nossos Valores com layout moderno -->
+            <div class="w-full py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #161616;">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Título da seção -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-accent mb-4">Nossos Valores</h2>
+                        <div class="w-24 h-1 bg-accent mx-auto"></div>
+                    </div>
+                    
+                    <!-- Layout com duas colunas invertidas -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 md:gap-12 items-center">
+                        <!-- Coluna de texto -->
+                        <div class="md:w-1/2 space-y-6 fade-element">
+                            <p class="text-base md:text-lg leading-relaxed text-white/80">
+                                Nossos valores são o alicerce de nosso trabalho e refletem nosso compromisso com nossos
+                                clientes e com o mercado. Acreditamos na ética, transparência,
+                                responsabilidade, inovação e excelência em tudo o que fazemos.
+                            </p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                    <h4 class="text-lg font-bold text-accent mb-2">Ética</h4>
+                                    <p class="text-white/70">Atuamos com integridade e honestidade em todas as nossas relações.</p>
+                                </div>
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                    <h4 class="text-lg font-bold text-accent mb-2">Transparência</h4>
+                                    <p class="text-white/70">Comunicação clara e aberta com nossos clientes e parceiros.</p>
+                                </div>
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                    <h4 class="text-lg font-bold text-accent mb-2">Inovação</h4>
+                                    <p class="text-white/70">Buscamos constantemente novas soluções e estratégias.</p>
+                                </div>
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                    <h4 class="text-lg font-bold text-accent mb-2">Excelência</h4>
+                                    <p class="text-white/70">Comprometimento com a qualidade em tudo o que fazemos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coluna da imagem -->
+                        <div class="md:w-1/2 flex justify-center">
+                            <img src="./assets/SOBRE NÓS/IMG_9765.HEIC" alt="Nossa equipe" 
+                                class="rounded-lg shadow-lg max-w-full h-auto object-cover fade-element" 
+                                style="max-height: 500px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Carrossel de Imagens -->
+            <div class="w-full py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #2a2a2a;">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Título da seção -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-accent mb-4">Nossa Trajetória</h2>
+                        <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                        <p class="text-base md:text-lg leading-relaxed text-white/80 max-w-3xl mx-auto">
+                            Conheça um pouco da nossa história através dessas imagens que representam nossa jornada de sucesso e dedicação.
                         </p>
                     </div>
-                    <div class="space-y-3 md:space-y-4 fade-element fade-delay-1">
-                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossa Missão</h2>
-                        <p class="text-base md:text-lg leading-relaxed text-white/80">
-                            Nossa missão é proporcionar aos nossos clientes um futuro financeiro sólido e próspero,
-                            através de um planejamento financeiro inteligente e investimentos
-                            estratégicos. Buscamos sempre a excelência em nossos serviços, com foco na transparência,
-                            ética e resultados.
-                        </p>
-                    </div>
-                    <div class="space-y-3 md:space-y-4">
-                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossa Visão</h2>
-                        <p class="text-base md:text-lg leading-relaxed text-white/80">
-                            Almejamos ser reconhecidos como a principal referência em investimentos e planejamento
-                            financeiro, destacando-nos pela qualidade de nossos serviços, inovação e
-                            compromisso com o sucesso de nossos clientes. Queremos construir relações duradouras,
-                            baseadas na confiança e no respeito.
-                        </p>
-                    </div>
-                    <div class="space-y-3 md:space-y-4">
-                        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-accent">Nossos Valores</h2>
-                        <p class="text-base md:text-lg leading-relaxed text-white/80">
-                            Nossos valores são o alicerce de nosso trabalho e refletem nosso compromisso com nossos
-                            clientes e com o mercado. Acreditamos na ética, transparência,
-                            responsabilidade, inovação e excelência em tudo o que fazemos. Buscamos sempre superar as
-                            expectativas, oferecendo soluções personalizadas e resultados consistentes.
-                        </p>
+                    
+                    <!-- Swiper Carrossel -->
+                    <div class="swiper imageSwiper fade-element">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <img src="./assets/SOBRE NÓS/IMG_9762.HEIC" alt="Nossa história" 
+                                        class="rounded-lg shadow-lg max-w-full h-auto object-cover" 
+                                        style="max-height: 500px;" />
+                                    <p class="mt-4 text-white/80 text-center">Nosso compromisso com a excelência</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <img src="./assets/SOBRE NÓS/IMG_9764.HEIC" alt="Nossa equipe" 
+                                        class="rounded-lg shadow-lg max-w-full h-auto object-cover" 
+                                        style="max-height: 500px;" />
+                                    <p class="mt-4 text-white/80 text-center">Trabalhando juntos para seu sucesso</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <img src="./assets/SOBRE NÓS/IMG_9765.HEIC" alt="Nosso ambiente" 
+                                        class="rounded-lg shadow-lg max-w-full h-auto object-cover" 
+                                        style="max-height: 500px;" />
+                                    <p class="mt-4 text-white/80 text-center">Ambiente propício para inovação</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <img src="./assets/SOBRE NÓS/IMG_9766.HEIC" alt="Nossos resultados" 
+                                        class="rounded-lg shadow-lg max-w-full h-auto object-cover" 
+                                        style="max-height: 500px;" />
+                                    <p class="mt-4 text-white/80 text-center">Resultados que falam por si</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <img src="./assets/SOBRE NÓS/trofeu.jpg" alt="Nossas conquistas" 
+                                        class="rounded-lg shadow-lg max-w-full h-auto object-cover" 
+                                        style="max-height: 500px;" />
+                                    <p class="mt-4 text-white/80 text-center">Reconhecimento e conquistas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Paginação -->
+                        <div class="swiper-pagination mt-6"></div>
+                        
+                        <!-- Navegação -->
+                        <div class="swiper-button-next text-accent"></div>
+                        <div class="swiper-button-prev text-accent"></div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
+    <!-- Script do Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
-        
+
         // Função de fade-in no scroll
         function fadeInOnScroll() {
             const elements = document.querySelectorAll('.fade-element');
@@ -154,6 +336,38 @@
                 origin: 'bottom'
             });
         }
+        
+        // Inicialização do carrossel de imagens
+        const imageSwiper = new Swiper('.imageSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+            }
+        });
     </script>
 </body>
 
