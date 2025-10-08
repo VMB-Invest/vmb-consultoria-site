@@ -1,4 +1,4 @@
-/* VMB Invest - Estilo Global */
+/* VMB Advisor - Estilo Global */
 /* Paleta de Cores Padronizada: Preto (#161616), Azul (#25c5ef), Branco (#ffffff) */
 
 :root {
@@ -157,5 +157,45 @@ img, video {
 @media (min-width: 768px) {
   .nav-link {
     padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Hero Section Enhancements */
+.hero-section {
+  position: relative;
+}
+
+/* Improved text readability with stronger overlay */
+.hero-section .hero-content {
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section h1 {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.hero-section p {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Smooth transition between sections */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(22, 22, 22, 0.8) 70%, #161616 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Enhanced fade out effect for larger screens */
+@media (min-width: 768px) {
+  .hero-section::after {
+    height: 80px;
   }
 }

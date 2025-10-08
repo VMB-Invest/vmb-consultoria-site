@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
-    <title>VMB Invest - Carreiras</title>
+    <title>VMB Advisor - Carreiras</title>
     <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -23,44 +23,48 @@
 
 <body class="font-display text-white" style="background-color: #161616;">
     <div class="flex h-auto min-h-screen w-full flex-col">
-        <header class="bg-black flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0">
+        <header class="bg-black border-b border-white/20 py-3 md:py-0">
+            <div class="max-w-[1280px] mx-auto px-4 md:px-10 flex items-center justify-between whitespace-nowrap">
                 <div class="flex items-center gap-3 text-white">
-                    <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-36">
+                    <img src="./VMB Advisor.png" alt="VMB Advisor" class="w-24 md:w-36">
                 </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex flex-1 justify-end gap-8">
-                <div class="flex items-center gap-8 text-sm text-white">
-                    <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
-                    <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
-                    <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
-                    <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
-                    <a class="hover:text-accent transition-colors font-thin text-accent" href="trabalheconosco.html">Carreiras</a>
-                </div>
-                <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
-                    <span class="truncate">Iniciar Assessoria</span>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
-            </nav>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-8 text-sm text-white">
+                        <a class="hover:text-accent transition-colors font-thin" href="index.html">Home</a>
+                        <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
+                        <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
+                        <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
+                        <a class="hover:text-accent transition-colors font-thin text-accent" href="trabalheconosco.html">Carreiras</a>
+                    </div>
+                    <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
+                        <span class="truncate">Iniciar Assessoria</span>
+                    </button>
+                </nav>
+            </div>
         </header>
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0D0D09] border-b border-white/20">
-            <nav class="flex flex-col px-4 py-4 space-y-4">
-                <a class="hover:text-accent transition-colors font-thin py-2" href="index.html">Home</a>
-                <a class="hover:text-accent transition-colors font-thin py-2" href="sobre.html">Sobre Nós</a>
-                <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
-                <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
-                <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="trabalheconosco.html">Carreiras</a>
-                <button
-                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
-                    <span class="truncate">Iniciar Assessoria</span>
-                </button>
-            </nav>
+            <div class="max-w-[1280px] mx-auto px-4">
+                <nav class="flex flex-col py-4 space-y-4">
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="index.html">Home</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="sobre.html">Sobre Nós</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
+                    <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
+                    <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="trabalheconosco.html">Carreiras</a>
+                    <button
+                        class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
+                        <span class="truncate">Iniciar Assessoria</span>
+                    </button>
+                </nav>
+            </div>
         </div>
         <main class="flex-1">
             <div class="px-4 py-6 sm:py-8 md:px-10 md:py-16">
@@ -71,11 +75,11 @@
                             class="absolute inset-0 flex flex-col items-start justify-center sm:justify-end gap-4 sm:gap-6 rounded-xl p-4 sm:p-6 md:p-10">
                             <div class="max-w-3xl space-y-3 sm:space-y-4 fade-element">
                                 <h1 class="text-3xl sm:text-4xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">Construa sua carreira na
-                                    <span class="text-accent">VMB Invest</span>
+                                    <span class="text-accent">VMB Advisor</span>
                                 </h1>
                                 <p class="text-sm sm:text-base md:text-lg text-white/90 fade-element fade-delay-2">
                                     Junte-se a uma equipe apaixonada por transformar o futuro financeiro de nossos
-                                    clientes. Na VMB Invest, valorizamos a inovação, a colaboração e o crescimento
+                                    clientes. Na VMB Advisor, valorizamos a inovação, a colaboração e o crescimento
                                     contínuo. Se você busca um ambiente desafiador e recompensador, onde suas ideias são
                                     ouvidas e seu potencial é valorizado, este é o lugar certo para você.
                                 </p>
@@ -91,7 +95,7 @@
                             <div>
                                 <h2 class="text-xl sm:text-2xl font-bold text-white">Nossa Cultura</h2>
                                 <p class="mt-3 md:mt-4 text-sm sm:text-base text-white/80">
-                                    Na VMB Invest, acreditamos que o sucesso de nossos clientes é o nosso sucesso.
+                                    Na VMB Advisor, acreditamos que o sucesso de nossos clientes é o nosso sucesso.
                                     Fomentamos um ambiente de trabalho inclusivo e diversificado, onde cada membro da
                                     equipe é incentivado a contribuir com sua perspectiva única. Valorizamos a
                                     transparência, a integridade e o compromisso com a excelência em tudo o que fazemos.
@@ -164,7 +168,7 @@
                         </svg>
                     </a>
                 </div>
-                <p class="mt-6 sm:mt-8 text-xs sm:text-sm text-white/60">© 2024 VMB Invest. Todos os direitos reservados.</p>
+                <p class="mt-6 sm:mt-8 text-xs sm:text-sm text-white/60">© 2024 VMB Advisor. Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>

@@ -45,87 +45,115 @@
         .swiper-slide {
             height: auto;
         }
+        
+        /* Hero Section Text Enhancement */
+        .hero-text-enhanced {
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 4px 24px rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-description-enhanced {
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8), 0 2px 16px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(1px);
+        }
+        
+        /* Smooth section transition */
+        .section-transition {
+            position: relative;
+            z-index: 20;
+            background: linear-gradient(to bottom, transparent 0%, rgba(22, 22, 22, 0.95) 20%, #161616 100%);
+            margin-top: -40px;
+            padding-top: 60px;
+        }
     </style>
-    <title>VMB Invest</title>
+    <title>VMB Advisor</title>
     <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
 </head>
 
 <body class="font-display bg-primary text-text-light" style="background-color: #161616;">
     <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
         <div class="flex h-full grow flex-col">
-            <header
-                class="bg-black flex items-center justify-between whitespace-nowrap border-b border-white/20 px-4 md:px-10 py-3 md:py-0">
-                <div class="flex items-center gap-3 text-white">
-                    <img src="./VMB Advisor.svg" alt="VMB Invest" class="w-24 md:w-36">
-                </div>
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex flex-1 justify-end gap-8">
-                    <div class="flex items-center gap-8 text-sm text-white">
-                        <a class="hover:text-accent transition-colors font-thin text-accent" href="index.html">Home</a>
-                        <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
-                        <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
-                        <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
-                        <a class="hover:text-accent transition-colors font-thin"
-                            href="trabalheconosco.html">Carreiras</a>
+            <header class="bg-black border-b border-white/20 py-3 md:py-0">
+                <div class="max-w-[1280px] mx-auto px-4 md:px-10 flex items-center justify-between whitespace-nowrap">
+                    <div class="flex items-center gap-3 text-white">
+                        <img src="./VMB Advisor.png" alt="VMB Advisor" class="w-24 md:w-36">
                     </div>
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
-                        <span class="truncate">Iniciar Assessoria</span>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
-                </nav>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex flex-1 justify-end gap-8">
+                        <div class="flex items-center gap-8 text-sm text-white">
+                            <a class="hover:text-accent transition-colors font-thin text-accent" href="index.html">Home</a>
+                            <a class="hover:text-accent transition-colors font-thin" href="sobre.html">Sobre Nós</a>
+                            <a class="hover:text-accent transition-colors font-thin" href="equipe.html">Equipe</a>
+                            <a class="hover:text-accent transition-colors font-thin" href="local.html">Contato</a>
+                            <a class="hover:text-accent transition-colors font-thin"
+                                href="trabalheconosco.html">Carreiras</a>
+                        </div>
+                        <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all">
+                            <span class="truncate">Iniciar Assessoria</span>
+                        </button>
+                    </nav>
+                </div>
             </header>
             <!-- Mobile Navigation Menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-[#0D0D09] border-b border-white/20">
-                <nav class="flex flex-col px-4 py-4 space-y-4">
-                    <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="index.html">Home</a>
-                    <a class="hover:text-accent transition-colors font-thin py-2" href="sobre.html">Sobre Nós</a>
-                    <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
-                    <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
-                    <a class="hover:text-accent transition-colors font-thin py-2"
-                        href="trabalheconosco.html">Carreiras</a>
-                    <button
-                        class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
-                        <span class="truncate">Iniciar Assessoria</span>
-                    </button>
-                </nav>
+                <div class="max-w-[1280px] mx-auto px-4">
+                    <nav class="flex flex-col py-4 space-y-4">
+                        <a class="hover:text-accent transition-colors font-thin text-accent py-2" href="index.html">Home</a>
+                        <a class="hover:text-accent transition-colors font-thin py-2" href="sobre.html">Sobre Nós</a>
+                        <a class="hover:text-accent transition-colors font-thin py-2" href="equipe.html">Equipe</a>
+                        <a class="hover:text-accent transition-colors font-thin py-2" href="local.html">Contato</a>
+                        <a class="hover:text-accent transition-colors font-thin py-2"
+                            href="trabalheconosco.html">Carreiras</a>
+                        <button
+                            class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-accent text-black text-sm font-bold shadow-md hover:bg-opacity-80 transition-all mt-2">
+                            <span class="truncate">Iniciar Assessoria</span>
+                        </button>
+                    </nav>
+                </div>
             </div>
             <main class="flex flex-1 flex-col items-center">
                 <div class="w-full max-w-full">
-                    <section class="mb-12 md:mb-20">
+                    <section class="mb-12 md:mb-20 hero-section">
                         <div class="relative min-h-[400px] md:min-h-[520px] overflow-hidden">
                             <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
-                                <source src="./INSTITUCIONAL.mp4" type="video/mp4">
+                                <source src="https://pub-db48207f42de49e7b9575db65c6f484f.r2.dev/INSTITUCIONAL.mp4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                            <!-- Overlay mais escuro para destacar o texto -->
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30">
                             </div>
+                            <!-- Fade out gradient no final da seção -->
+                            <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-primary pointer-events-none"></div>
                             <div
-                                class="relative flex h-full min-h-[400px] md:min-h-[520px] flex-col items-start justify-center md:justify-end p-4 sm:p-6 md:p-12 lg:p-20">
-                                <div class="flex flex-col gap-3 md:gap-4 text-left max-w-2xl hero-content">
-                                    <h1
-                                        class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight">
-                                        Construindo o Futuro Financeiro que <span class="text-accent">Você Merece</span>
-                                    </h1>
-                                    <p class="text-white/90 text-sm sm:text-base md:text-lg">Na VMB Invest,
-                                        transformamos seus
-                                        sonhos em realidade através de um planejamento financeiro sólido e
-                                        personalizado. Nossa equipe de especialistas está pronta para guiar você em cada
-                                        passo do caminho.</p>
+                                class="relative flex h-full min-h-[400px] md:min-h-[520px] flex-col items-center justify-center md:justify-end p-4 sm:p-6 md:p-12 lg:p-20">
+                                <div class="w-full max-w-[1280px] flex flex-col items-start">
+                                    <div class="flex flex-col gap-3 md:gap-4 text-left max-w-4xl hero-content">
+                                        <h1
+                                            class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight hero-text-enhanced">
+                                            Construindo o Futuro Financeiro que <span class="text-accent">Você Merece</span>
+                                        </h1>
+                                        <p class="text-white text-sm sm:text-base md:text-lg hero-description-enhanced">Na VMB Advisor,
+                                            transformamos seus
+                                            sonhos em realidade através de um planejamento financeiro sólido e
+                                            personalizado. Nossa equipe de especialistas está pronta para guiar você em cada
+                                            passo do caminho.</p>
+                                    </div>
+                                    <button
+                                        class="mt-6 md:mt-8 flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-6 sm:px-8 bg-accent text-white text-sm sm:text-base font-bold shadow-lg hover:bg-opacity-80 transition-all floating">
+                                        <span class="truncate">Saiba Mais</span>
+                                    </button>
                                 </div>
-                                <button
-                                    class="mt-6 md:mt-8 flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 sm:h-12 px-6 sm:px-8 bg-accent text-white text-sm sm:text-base font-bold shadow-lg hover:bg-opacity-80 transition-all floating">
-                                    <span class="truncate">Saiba Mais</span>
-                                </button>
                             </div>
                         </div>
                     </section>
-                    <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+                    <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto section-transition">
                         <section class="mb-12 md:mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                             <div class="grid grid-cols-2 gap-3 md:gap-4 order-2 md:order-1">
                                 <div
@@ -287,7 +315,7 @@
                                     <div class="swiper-slide">
                                         <div class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm h-full"
                                             style="background-color: #2a2a2a;">                                   
-                                            <p class="text-sm md:text-base text-white/80 italic">"A VMB Invest transformou minha
+                                            <p class="text-sm md:text-base text-white/80 italic">"A VMB Advisor transformou minha
                                                 visão sobre investimentos. O planejamento personalizado me deu segurança para alcançar meus
                                                 objetivos financeiros de longo prazo."</p>
                                             <p class="text-sm md:text-base font-bold text-accent text-right">- Ana Silva</p>
@@ -299,7 +327,7 @@
                                         <div class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm h-full"
                                             style="background-color: #2a2a2a;">                                    
                                             <p class="text-sm md:text-base text-white/80 italic">"A consultoria empresarial da
-                                                VMB Invest foi fundamental para o crescimento da minha empresa. Recomendo a todos os empreendedores
+                                                VMB Advisor foi fundamental para o crescimento da minha empresa. Recomendo a todos os empreendedores
                                                 que buscam solidez financeira!"</p>
                                             <p class="text-sm md:text-base font-bold text-accent text-right">- Carlos Pereira</p>
                                         </div>
@@ -321,7 +349,7 @@
                                         <div class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm h-full"
                                             style="background-color: #2a2a2a;">                                    
                                             <p class="text-sm md:text-base text-white/80 italic">"Após anos tentando organizar minhas finanças,
-                                                encontrei na VMB Invest o parceiro ideal. Em apenas 6 meses, consegui realizar meu sonho
+                                                encontrei na VMB Advisor o parceiro ideal. Em apenas 6 meses, consegui realizar meu sonho
                                                 de comprar meu primeiro imóvel."</p>
                                             <p class="text-sm md:text-base font-bold text-accent text-right">- Roberto Mendes</p>
                                         </div>
@@ -343,7 +371,7 @@
                                         <div class="flex flex-col gap-3 md:gap-4 rounded-xl p-4 md:p-6 border border-white/10 shadow-sm h-full"
                                             style="background-color: #2a2a2a;">                                    
                                             <p class="text-sm md:text-base text-white/80 italic">"Como empresário, precisava de uma
-                                                estratégia sólida para expandir meus negócios. A VMB Invest não só me ajudou com o planejamento
+                                                estratégia sólida para expandir meus negócios. A VMB Advisor não só me ajudou com o planejamento
                                                 financeiro, mas também com estratégias de crescimento sustentável."</p>
                                             <p class="text-sm md:text-base font-bold text-accent text-right">- Paulo Oliveira</p>
                                         </div>
@@ -456,7 +484,7 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="text-xs sm:text-sm text-white/60">© 2024 VMB Invest. Todos os direitos reservados.</p>
+                    <p class="text-xs sm:text-sm text-white/60">© 2024 VMB Advisor. Todos os direitos reservados.</p>
                 </div>
             </footer>
         </div>
