@@ -130,7 +130,7 @@
             <div class="w-full py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #2a2a2a;">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Título da seção -->
-                    <div class="text-center mb-12">
+                    <div class="text-center mb-12 section-title">
                         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-accent mb-4">Quem Somos</h2>
                         <div class="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
@@ -182,7 +182,7 @@
             <div class="w-full py-12 sm:py-16 md:py-24 lg:py-32" style="background-color: #161616;">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <!-- Título da seção -->
-                    <div class="text-center mb-12">
+                    <div class="text-center mb-12 section-title">
                         <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-accent mb-4">Nossos Valores</h2>
                         <div class="w-24 h-1 bg-accent mx-auto"></div>
                     </div>
@@ -198,19 +198,19 @@
                             </p>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30 value-card">
                                     <h4 class="text-lg font-bold text-accent mb-2">Ética</h4>
                                     <p class="text-white/70">Atuamos com integridade e honestidade em todas as nossas relações.</p>
                                 </div>
-                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30 value-card">
                                     <h4 class="text-lg font-bold text-accent mb-2">Transparência</h4>
                                     <p class="text-white/70">Comunicação clara e aberta com nossos clientes e parceiros.</p>
                                 </div>
-                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30 value-card">
                                     <h4 class="text-lg font-bold text-accent mb-2">Inovação</h4>
                                     <p class="text-white/70">Buscamos constantemente novas soluções e estratégias.</p>
                                 </div>
-                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30">
+                                <div class="p-4 rounded-lg border border-accent/30 bg-black/30 value-card">
                                     <h4 class="text-lg font-bold text-accent mb-2">Excelência</h4>
                                     <p class="text-white/70">Comprometimento com a qualidade em tudo o que fazemos.</p>
                                 </div>
@@ -392,6 +392,52 @@
                     spaceBetween: 30,
                 },
             }
+        });
+    </script>
+    
+    <script>
+        // Configuração do ScrollReveal
+        ScrollReveal({
+            distance: '60px',
+            duration: 2000,
+            delay: 300,
+            reset: false
+        });
+
+        // Animações para elementos fade
+        ScrollReveal().reveal('.fade-element', {
+            delay: 200,
+            distance: '30px',
+            origin: 'bottom'
+        });
+
+        ScrollReveal().reveal('.fade-delay-2', {
+            delay: 400,
+            distance: '30px',
+            origin: 'bottom'
+        });
+
+        // Animações para cards de valores
+        ScrollReveal().reveal('.value-card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            interval: 200
+        });
+
+        // Animações para elementos de galeria
+        ScrollReveal().reveal('.gallery-item', {
+            delay: 200,
+            distance: '40px',
+            origin: 'bottom',
+            interval: 150
+        });
+
+        // Animação para título da seção
+        ScrollReveal().reveal('.section-title', {
+            delay: 100,
+            distance: '30px',
+            origin: 'top'
         });
     </script>
 </body>
