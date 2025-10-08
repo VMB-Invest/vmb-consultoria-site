@@ -73,33 +73,33 @@
                                 para discutir suas necessidades de investimento.
                             </p>
                         </div>
-                        <form class="space-y-4 md:space-y-6" data-aos="fade-up" data-aos-delay="200">
+                        <form id="contact-form" class="space-y-4 md:space-y-6" data-aos="fade-up" data-aos-delay="200">
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="name">Nome</label>
                                 <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-10 sm:h-12 px-3 sm:px-4 text-sm transition-colors"
-                                    id="name" placeholder="Seu nome completo" type="text"
+                                    id="name" placeholder="Seu nome completo" type="text" required
                                     style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="email">Email</label>
                                 <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-10 sm:h-12 px-3 sm:px-4 text-sm transition-colors"
-                                    id="email" placeholder="seu.email@exemplo.com" type="email"
+                                    id="email" placeholder="seu.email@exemplo.com" type="email" required
                                     style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="phone">Telefone</label>
                                 <input
                                     class="form-input w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 h-10 sm:h-12 px-3 sm:px-4 text-sm transition-colors"
-                                    id="phone" placeholder="(11) 99999-9999" type="tel"
+                                    id="phone" placeholder="(11) 99999-9999" type="tel" required
                                     style="background-color: #2a2a2a;" />
                             </div>
                             <div>
                                 <label class="block text-sm font-medium mb-2 text-white" for="message">Mensagem</label>
                                 <textarea
                                     class="form-textarea w-full rounded-lg border-gray-600 text-white focus:border-accent focus:ring-2 focus:ring-accent/50 p-3 sm:p-4 text-sm transition-colors min-h-[120px] sm:min-h-[140px] resize-y"
-                                    id="message" placeholder="Sua mensagem"
+                                    id="message" placeholder="Sua mensagem" required
                                     style="background-color: #2a2a2a;"></textarea>
                             </div>
                             <button
@@ -126,7 +126,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-white">Telefone</h4>
-                                        <p class="text-gray-300">(11) 98765-4321</p>
+                                        <p class="text-gray-300">(21) 3513-2404</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-4">
@@ -157,17 +157,23 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="font-semibold text-white">Endereço</h4>
-                                        <p class="text-gray-300">Av. Paulista, 1234, São
-                                            Paulo, SP</p>
+                                        <h4 class="font-semibold text-white">Localização</h4>
+                                        <p class="text-gray-300 font-semibold">Plaza Shopping</p>
+                                        <p class="text-gray-300 text-sm mt-1">Plaza Corporate Offices<br>Rua XV de Novembro, nº 4 - Sala 1004<br>Centro, Niterói - RJ<br>CEP: 24020-125</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3] rounded-lg sm:rounded-xl overflow-hidden shadow-lg border-2 border-accent/20">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover"
-                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoEDdX-_QIN4UyYsZJLBQYH9NP_AOvT4gd7k2heyg_XDgfAN8Al1A1OZgsuW63TXOhGkQcOg8XxgrwX52spQUOmnRzPezBcDqUa89WiS4t4HPZazjUtepyQ_TV0YnC-URe9J2-yeLFOYP2f3D7WH3UqO42rIsR9KXYrv8r0ZuBQeThRKNhBdFQqNoqhATeDnSBglTKVmT718w_LAk1iTltcaM-lOE-sgc3PmjdtqN6VqBz9_6O0i3l2CeKd5y0ShN-ZoYmvs7u6COf");'>
-                            </div>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d917.9423784746996!2d-43.12499270000001!3d-22.8962074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99839bb8a5b27b%3A0xfebadee89bf3cc74!2sVMB%20Invest%20%7C%20Empresa%20credenciada%20%C3%A0%20XP%20Investimentos!5e0!3m2!1spt-BR!2sbr!4v1696789200000!5m2!1spt-BR!2sbr" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
                     </div>
                 </div>
@@ -203,7 +209,7 @@
                             <span class="sr-only">Instagram</span>
                         </a>
                     </div>
-                    <p class="text-sm text-white/60 text-center">© 2024 VMB Advisor. Todos os direitos reservados.</p>
+                    <p class="text-sm text-white/60 text-center">© 2025 VMB Advisor. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
@@ -231,6 +237,9 @@
             origin: 'bottom'
         });
     </script>
+
+    <!-- Script para envio de formulário -->
+    <script src="contact-form.js"></script>
 </body>
 
 </html>

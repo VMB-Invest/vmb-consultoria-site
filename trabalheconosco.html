@@ -107,19 +107,23 @@
                         <div class="space-y-4 sm:space-y-6 rounded-xl border border-white/10 p-4 sm:p-6 shadow-sm fade-element fade-delay-1"
                             style="background-color: #2a2a2a;">
                             <h2 class="text-xl sm:text-2xl font-bold text-accent">Como se candidatar</h2>
-                            <form class="space-y-3 sm:space-y-4">
+                            <form id="job-form" class="space-y-3 sm:space-y-4">
                                 <input
+                                    id="name"
                                     class="w-full rounded border-gray-600 p-2.5 sm:p-3 text-sm sm:text-base text-white placeholder-gray-400 focus:border-accent focus:ring-accent"
-                                    placeholder="Nome completo" type="text" style="background-color: #404040;" />
+                                    placeholder="Nome completo" type="text" required style="background-color: #404040;" />
                                 <input
+                                    id="email"
                                     class="w-full rounded border-gray-600 p-2.5 sm:p-3 text-sm sm:text-base text-white placeholder-gray-400 focus:border-accent focus:ring-accent"
-                                    placeholder="Email" type="email" style="background-color: #404040;" />
+                                    placeholder="Email" type="email" required style="background-color: #404040;" />
                                 <input
+                                    id="phone"
                                     class="w-full rounded border-gray-600 p-2.5 sm:p-3 text-sm sm:text-base text-white placeholder-gray-400 focus:border-accent focus:ring-accent"
-                                    placeholder="Telefone" type="tel" style="background-color: #404040;" />
+                                    placeholder="Telefone" type="tel" required style="background-color: #404040;" />
                                 <select
+                                    id="area"
                                     class="w-full rounded border-gray-600 p-2.5 sm:p-3 text-sm sm:text-base text-gray-400 focus:border-accent focus:ring-accent"
-                                    style="background-color: #404040;">
+                                    required style="background-color: #404040;">
                                     <option disabled="" selected="" value="">Área de interesse</option>
                                     <option class="text-white" value="investimentos">Investimentos</option>
                                     <option class="text-white" value="planejamento">Planejamento Financeiro</option>
@@ -127,6 +131,7 @@
                                     <option class="text-white" value="operacoes">Operações</option>
                                 </select>
                                 <textarea
+                                    id="message"
                                     class="min-h-24 sm:min-h-32 w-full resize-y rounded border-gray-600 p-2.5 sm:p-3 text-sm sm:text-base text-white placeholder-gray-400 focus:border-accent focus:ring-accent"
                                     placeholder="Mensagem (opcional)" style="background-color: #404040;"></textarea>
                                 <button
@@ -168,7 +173,7 @@
                         </svg>
                     </a>
                 </div>
-                <p class="mt-6 sm:mt-8 text-xs sm:text-sm text-white/60">© 2024 VMB Advisor. Todos os direitos reservados.</p>
+                <p class="mt-6 sm:mt-8 text-xs sm:text-sm text-white/60">© 2025 VMB Advisor. Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
@@ -195,6 +200,9 @@
             origin: 'bottom'
         });
     </script>
+
+    <!-- Script para envio de formulário de carreiras -->
+    <script src="job-form.js"></script>
 </body>
 
 </html>
